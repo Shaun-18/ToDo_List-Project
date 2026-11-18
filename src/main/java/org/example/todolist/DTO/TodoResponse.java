@@ -1,4 +1,11 @@
 package org.example.todolist.DTO;
 
-public record TodoResponse() {
+import java.time.LocalDate;
+
+public record TodoResponse(
+        long id,
+        String task,
+        LocalDate date,
+        boolean status
+) {
 }
