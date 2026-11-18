@@ -15,7 +15,7 @@ public record TodoRequest(
         @Size(max = 250, message = "Task must not exceed 250 characters")
         String task,
 
-        @JsonFormat(pattern = "yyyy-MM-dd")
+        @JsonFormat(pattern = "dd/MM/yyyy")
         @NotNull(message = "Date is required")
         LocalDate date,
 
