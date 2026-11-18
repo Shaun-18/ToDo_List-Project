@@ -5,12 +5,14 @@ import org.example.todolist.DTO.TodoResponse;
 import org.example.todolist.Entity.ToDoList;
 import org.example.todolist.Exceptions.ResourceNotFoundException;
 import org.example.todolist.Repository.TodoListRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
 
 import java.util.List;
 
+@Service
 public class TodoListService {
 
 
@@ -95,7 +97,8 @@ public class TodoListService {
                 toDoList.getId(),
                 toDoList.getTask(),
                 toDoList.getDate(),
-                toDoList.isStatus()
+                toDoList.getStatus()
+
         );
     }
 }

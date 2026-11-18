@@ -25,7 +25,8 @@ public class ToDoList {
     @Column(name = "Date", nullable = false)
     private LocalDate date;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "Status", nullable = false)
-    private boolean status;
+    private TodoStatus status;
 
 }
